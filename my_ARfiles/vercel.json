@@ -9,13 +9,7 @@
   "routes": [
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
     { "src": "/libs/(.*)", "dest": "/libs/$1" },
-    { "src": "/app\\.js", "dest": "/complete/main-file/app.js" },
-    { "src": "/complete/main-file/(.*\\.js)", "dest": "/complete/main-file/$1" },
-    { "src": "/complete/main-file/(.*\\.css)", "dest": "/complete/main-file/$1" },
-    { "src": "/complete/main-file/(.*\\.glb)", "dest": "/complete/main-file/$1" },
-    { "src": "/complete/main-file/(.*\\.gltf)", "dest": "/complete/main-file/$1" },
-    { "src": "/complete/main-file/(.*\\.png)", "dest": "/complete/main-file/$1" },
-    { "src": "/complete/main-file/(.*\\.jpg)", "dest": "/complete/main-file/$1" },
+    { "src": "/complete/main-file/(.*)", "dest": "/complete/main-file/$1" },
     { "src": "/", "dest": "/complete/main-file/index.html" }
   ]
 }
