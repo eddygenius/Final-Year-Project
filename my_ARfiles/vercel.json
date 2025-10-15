@@ -2,15 +2,14 @@
   "version": 2,
   "public": true,
   "builds": [
-    { "src": "complete/main-file/**", "use": "@vercel/static" },
-    { "src": "libs/**", "use": "@vercel/static" },
-    { "src": "assets/**", "use": "@vercel/static" }
+    { "src": "my_ARfiles/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/libs/(.*)", "dest": "/libs/$1" },
-    { "src": "/assets/(.*)", "dest": "/assets/$1" },
-    { "src": "/complete/main-file/(.*)", "dest": "/complete/main-file/$1" },
-    { "src": "/app.js", "dest": "/complete/main-file/app.js" },
-    { "src": "/", "dest": "/complete/main-file/index.html" }
+    { "src": "/my_ARfiles/(.*)", "dest": "/my_ARfiles/$1" },
+    { "src": "/libs/(.*)", "dest": "/my_ARfiles/libs/$1" },
+    { "src": "/assets/(.*)", "dest": "/my_ARfiles/assets/$1" },
+    { "src": "/complete/(.*)", "dest": "/my_ARfiles/complete/$1" },
+    { "src": "/app.js", "dest": "/my_ARfiles/complete/main-file/app.js" },
+    { "src": "/", "dest": "/my_ARfiles/complete/main-file/index.html" }
   ]
 }
