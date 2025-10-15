@@ -3,10 +3,12 @@
   "public": true,
   "builds": [
     { "src": "complete/main-file/**", "use": "@vercel/static" },
-    { "src": "assets/**", "use": "@vercel/static" }
+    { "src": "assets/**", "use": "@vercel/static" },
+    { "src": "libs/**", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/libs/(.*)", "dest": "/libs/$1" },
     { "src": "/(.*)", "dest": "/complete/main-file/$1" },
     { "src": "/", "dest": "/complete/main-file/index.html" }
   ]
