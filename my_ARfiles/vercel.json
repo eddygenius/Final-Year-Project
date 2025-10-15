@@ -1,9 +1,12 @@
 {
   "version": 2,
+  "public": true,
   "builds": [
-    { "src": "complete/main-file/**", "use": "@vercel/static" }
+    { "src": "complete/main-file/**", "use": "@vercel/static" },
+    { "src": "assets/**", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
     { "src": "/(.*)", "dest": "/complete/main-file/$1" },
     { "src": "/", "dest": "/complete/main-file/index.html" }
   ]
