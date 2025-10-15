@@ -4,24 +4,12 @@
   "builds": [
     { "src": "complete/main-file/**", "use": "@vercel/static" },
     { "src": "assets/**", "use": "@vercel/static" },
-    { "src": "libs/**", "use": "@vercel/static" },
-    { "src": "node_modules/three/**", "use": "@vercel/static" }
+    { "src": "libs/**", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
     { "src": "/libs/(.*)", "dest": "/libs/$1" },
-    { "src": "/node_modules/three/(.*)", "dest": "/node_modules/three/$1" },
-    { "src": "/complete/main-file/(.*)", "dest": "/complete/main-file/$1" },
+    { "src": "/(.*)", "dest": "/complete/main-file/$1" },
     { "src": "/", "dest": "/complete/main-file/index.html" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" },
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
-      ]
-    }
   ]
 }
